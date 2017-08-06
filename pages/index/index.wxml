@@ -1,0 +1,45 @@
+<view class="navbar">
+  <view class="navbar-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchNav">
+    <text class="navbar-text {{currentNavbar==idx ? 'active' : ''}}">{{item}}</text>
+  </view>
+</view>
+<view class="main">
+    <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{topPaints}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="selected">
+        <view class="select-title"><text>近期作品</text></view>
+        <view class="select-top">
+            <view class="select-top-small">
+                <navigator url="list/list">
+                    <image src="/image/resources/4.jpeg"></image>
+                </navigator>
+            </view>
+            <view class="select-top-small">
+                <navigator url="list/list">
+                    <image src="/image/resources/5.png"></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="select-bottom">
+            <navigator url="list/list">
+                <image src="/image/resources/6.jpeg"></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="newest">
+        <view class="newest-title"><text>往期佳作</text></view>
+        <view class="newest-box">
+            <view class="newest-list" wx:for="{{pastGoodPaints}}" wx:for-index="idx" data-idx="{{idx}}">
+                <navigator url="details/details">
+                    <image src="{{item.url}}"></image>
+                    <view class="newest-text"><text>{{item.name}}</text></view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,52 @@
+{
+  "pages": [
+      "pages/index/index",
+      "pages/shopping-cart/shopping-cart",
+      "pages/paint-view/paint-view",
+      "pages/bind-student/bind-student",
+      "pages/paint-manager/paint-manager",
+      "pages/user/user",
+      "pages/checkout/checkout"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Jerboa",
+    "navigationBarBackgroundColor": "#bfe6f1",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#bfe6f1",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/navbar-bottom/idle/index.png",
+      "selectedIconPath": "image/navbar-bottom/clicked/index.png",
+      "text": "主页"
+    },{
+      "pagePath": "pages/paint-manager/paint-manager",
+      "iconPath": "image/navbar-bottom/idle/paint.png/",
+      "selectedIconPath": "image/navbar-bottom/clicked/paint.png",
+      "text": "作品集"
+    },{
+      "pagePath": "pages/shopping-cart/shopping-cart",
+      "iconPath": "image/navbar-bottom/idle/cart.png",
+      "selectedIconPath": "image/navbar-bottom/clicked/cart.png",
+      "text": "购物车"
+    },{
+      "pagePath": "pages/user/user",
+      "iconPath": "image/navbar-bottom/idle/user.png",
+      "selectedIconPath": "image/navbar-bottom/clicked/user.png",
+      "text": "用户"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
